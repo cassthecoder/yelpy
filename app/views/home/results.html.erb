@@ -1,14 +1,15 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <div class="well center-it">
-      <h2>Let's Get Some <%= @food.capitalize %> in <%= @location %></h2>
+    <div class="well text-center">
+      <h1>Let's Get Some <%= @food.upcase %> in <%= @location.upcase %> !</h1>
     </div>
   </div>
 </div>
+<div class="container">
 <div class="row">
   <% @results.businesses.each do |biz| %>
-    <div class="col-md-4">
-      <div class="well center-it">
+    
+      <div class="well text-center">
         <h3><%= biz.name %></h3>
         <p>
           <%= image_tag biz.rating_img_url_large, alt: "Yelp Rating" %>
@@ -19,6 +20,7 @@
           <% end %>
         </p>
       </div>
-    </div>
+   
   <% end %>
+  </div>
 </div>
