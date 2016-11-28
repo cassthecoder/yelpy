@@ -13,7 +13,7 @@ class HomeController < ApplicationController
     # the client search set up by the Yelp gem
     # takes only two arguments, so if I want to
     # pass more, I can include them in a hash
-    parameters = { term: @food, limit: 9 }
+    parameters = { term: @food}
 
     # using the Yelp gem to make the API call
     # the two arguments passed are the location I
